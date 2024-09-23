@@ -1,4 +1,4 @@
-/* General Styles */
+/*general body style*/
 body {
     margin: 0;
     padding: 0;
@@ -7,102 +7,128 @@ body {
     background-image: url('img/background.png');
 }
 
-#banner-container {/*banner section for the top part*/
+/*banner section for the top part*/
+#banner-container {
     background-image: url('img/bannerbackground.png');
     height: 50px;
     position: relative;
     text-align: center;
+    align-items: center;
 }
 
-#banner {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#movie-title { /*movie title section below banner*/
+/*movie title section below banner*/
+#movie-title { 
     font-size: 24pt;
     font-weight: bold;
     text-align: center;
     margin: 20px 0;
 }
-
-#content-area { /*main content section*/
+/*main content section that holds main (will hold reviews+overview) and footer*/
+#content-area { 
     width: 800px;
     margin: 0 auto;
     border: 4px solid gray;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
-#rating-section { /*left central rating section*/
+/*rating section for everything that goes in the banner*/
+#rating-section { 
     width: 550px;
 }
-
 #rating-banner {
     background-image: url('img/rottenbackground.png');
     height: 85px;
     display: flex;
     align-items: center;
 }
-
 #rating-number {
     font-size: 48pt;
     font-weight: bold;
     color: red;
 }
-
 #review-total {
     color: lightgray;
 }
 
+/*main section for reviews+overviews*/
+#main {
+    display: flex;
+    flex-direction: row;
+}
+
+/*reviews section*/
 #reviews-container {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
-
 .review-column { /*class for review columns*/
     width: 47%;
     margin-right: 2%;
-    border: 2px solid black;
-    
+    margin-left: 2%;
 }
-
 .review-box { /*class for review box*/
     background-color: #E1D697;
     border: 2px solid gray;
     padding: 8px;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 8pt;
+    overflow: auto;
 }
-
 .review-icon {
     float: left;
     margin-right: 5px;
 }
-
+.reviewer-div {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
 .reviewer-info {
-    font-style: italic;
+    display: flex;
+    margin-left: 5px;
+    flex-direction: column;
 }
 
-/* Overview Section */
+/*overview Section*/
 #overview {
     width: 250px;
     background-color: #A2B964;
-    padding: 10px;
+    font-family: Arial;
+    font-size: 8pt;
+}
+.overview-heading {
+    display: flex;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+.overview-info {
+    display: flex;
+    margin-left: 20%;
+    margin-bottom: 10px;
 }
 
-/* Footer Section */
+/*footer section*/
 #footer {
     background-color: #A2B964;
-    padding: 5px;
     text-align: center;
 }
 
-#validators {
+/*validators*/
+.license {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 5px; 
+    right: 5px; 
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
 }
+.w3c img {
+    width: 75px;
+    height: auto;
+}
+
